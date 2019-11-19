@@ -845,6 +845,7 @@ file:///home/zliao/work/flutterProjects/icomi25d/lib/designer/gadgets/icomi/serv
 file:///home/zliao/work/flutterProjects/icomi25d/lib/designer/gadgets/icomi/service.dart
 file:///home/zliao/work/flutterProjects/icomi25d/lib/designer/gadgets/properties.dart
 file:///home/zliao/work/flutterProjects/icomi25d/lib/designer/gadgets/properties.g.dart
+file:///home/zliao/work/flutterProjects/icomi25d/lib/designer/gadgets/web_video_player.dart
 file:///home/zliao/work/flutterProjects/icomi25d/lib/designer/id_generator.dart
 file:///home/zliao/work/flutterProjects/icomi25d/lib/designer/property_editor/alignment_editor.dart
 file:///home/zliao/work/flutterProjects/icomi25d/lib/designer/property_editor/global_properties.dart
@@ -852,6 +853,9 @@ file:///home/zliao/work/flutterProjects/icomi25d/lib/designer/property_editor/pr
 file:///home/zliao/work/flutterProjects/icomi25d/lib/designer/property_editor/single_property_editors.dart
 file:///home/zliao/work/flutterProjects/icomi25d/lib/designer/utils.dart
 file:///home/zliao/work/flutterProjects/icomi25d/lib/designer/utils/color_picker/block_picker.dart
+file:///home/zliao/work/flutterProjects/icomi25d/lib/designer/weather/baidu/weather_api.dart
+file:///home/zliao/work/flutterProjects/icomi25d/lib/designer/weather/weather_api.dart
+file:///home/zliao/work/flutterProjects/icomi25d/lib/designer/weather/whether_data.dart
 file:///home/zliao/work/flutterProjects/icomi25d/lib/ds_designer.dart
 file:///home/zliao/work/flutterProjects/icomi25d/lib/ds_designer_selector.dart
 file:///home/zliao/work/flutterProjects/icomi25d/lib/json_example.dart
@@ -860,10 +864,12 @@ file:///home/zliao/work/flutterProjects/icomi25d/lib/json_test.dart
 file:///home/zliao/work/flutterProjects/icomi25d/lib/main.dart
 file:///home/zliao/work/flutterProjects/icomi25d/lib/matrix4test.dart
 file:///home/zliao/work/flutterProjects/icomi25d/lib/mixin_test.dart
+file:///home/zliao/work/flutterProjects/icomi25d/lib/office365_test.dart
 file:///home/zliao/work/flutterProjects/icomi25d/lib/realui.dart
 file:///home/zliao/work/flutterProjects/icomi25d/lib/rxdart_package/bloc_provider.dart
 file:///home/zliao/work/flutterProjects/icomi25d/lib/rxdart_package/state_manager.dart
 file:///home/zliao/work/flutterProjects/icomi25d/lib/rxdart_simple_test.dart
 file:///home/zliao/work/flutterProjects/icomi25d/lib/rxdart_state_page.dart
 file:///home/zliao/work/flutterProjects/icomi25d/lib/screen_rotation.dart
+file:///home/zliao/work/flutterProjects/icomi25d/lib/web_color_image_test.dart
 file:///home/zliao/work/flutterProjects/icomi25d/lib/web_video_test.dart
