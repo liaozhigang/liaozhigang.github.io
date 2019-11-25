@@ -1,3 +1,4 @@
+file:///home/zliao/development/flutter/.pub-cache/git/zzvc_screen_plugin-1e31abc5a1b1cf7ad406c59fb8a46a7a55e3da41/lib/zzvc_screen_plugin.dart
 file:///home/zliao/development/flutter/.pub-cache/hosted/pub.flutter-io.cn/audioplayers-0.13.2/lib/audio_cache.dart
 file:///home/zliao/development/flutter/.pub-cache/hosted/pub.flutter-io.cn/audioplayers-0.13.2/lib/audioplayers.dart
 file:///home/zliao/development/flutter/.pub-cache/hosted/pub.flutter-io.cn/charcode-1.1.2/lib/ascii.dart
@@ -825,6 +826,7 @@ file:///home/zliao/development/flutter/packages/flutter/lib/src/widgets/will_pop
 file:///home/zliao/development/flutter/packages/flutter/lib/widgets.dart
 file:///home/zliao/work/flutterProjects/icomi25d/.dart_tool/flutter_build/c60501128bb0a1f1eb3f9a42f488b299/main.dart
 file:///home/zliao/work/flutterProjects/icomi25d/.packages
+file:///home/zliao/work/flutterProjects/icomi25d/lib/animated_opacity_test.dart
 file:///home/zliao/work/flutterProjects/icomi25d/lib/auto_size_text/auto_size_group.dart
 file:///home/zliao/work/flutterProjects/icomi25d/lib/auto_size_text/auto_size_text.dart
 file:///home/zliao/work/flutterProjects/icomi25d/lib/auto_size_text/auto_size_text_widget.dart
@@ -835,13 +837,16 @@ file:///home/zliao/work/flutterProjects/icomi25d/lib/designer/ds_player.dart
 file:///home/zliao/work/flutterProjects/icomi25d/lib/designer/ds_state_manager.dart
 file:///home/zliao/work/flutterProjects/icomi25d/lib/designer/gadgets/gadgets.dart
 file:///home/zliao/work/flutterProjects/icomi25d/lib/designer/gadgets/icomi/api/web_api.dart
+file:///home/zliao/work/flutterProjects/icomi25d/lib/designer/gadgets/icomi/data_model.dart
+file:///home/zliao/work/flutterProjects/icomi25d/lib/designer/gadgets/icomi/icomi_clock.dart
+file:///home/zliao/work/flutterProjects/icomi25d/lib/designer/gadgets/icomi/icomi_light.dart
+file:///home/zliao/work/flutterProjects/icomi25d/lib/designer/gadgets/icomi/icomi_message.dart
 file:///home/zliao/work/flutterProjects/icomi25d/lib/designer/gadgets/icomi/icomi_text.dart
 file:///home/zliao/work/flutterProjects/icomi25d/lib/designer/gadgets/icomi/meeting_action.dart
 file:///home/zliao/work/flutterProjects/icomi25d/lib/designer/gadgets/icomi/meeting_info_widget.dart
 file:///home/zliao/work/flutterProjects/icomi25d/lib/designer/gadgets/icomi/meeting_list_widget.dart
 file:///home/zliao/work/flutterProjects/icomi25d/lib/designer/gadgets/icomi/meeting_state_manager.dart
 file:///home/zliao/work/flutterProjects/icomi25d/lib/designer/gadgets/icomi/meeting_status.dart
-file:///home/zliao/work/flutterProjects/icomi25d/lib/designer/gadgets/icomi/server_room_info.dart
 file:///home/zliao/work/flutterProjects/icomi25d/lib/designer/gadgets/icomi/service.dart
 file:///home/zliao/work/flutterProjects/icomi25d/lib/designer/gadgets/properties.dart
 file:///home/zliao/work/flutterProjects/icomi25d/lib/designer/gadgets/properties.g.dart
