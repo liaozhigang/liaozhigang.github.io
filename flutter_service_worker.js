@@ -1,70 +1,160 @@
 'use strict';
+const MANIFEST = 'flutter-app-manifest';
+const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "/index.html": "0b453c1f702411e86aae26ea5e0391cf",
-"/main.dart.js": "d2628ca2eff5e994ea100e8ba956ad1c",
-"/assets/LICENSE": "8100c3c3dcbca896aaba26537a6fe06b",
-"/assets/AssetManifest.json": "35a99624aa678f80ec9ddcff6ab0f847",
-"/assets/FontManifest.json": "92f8fe616884b539a8c9a6b2ae33b130",
-"/assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "115e937bb829a890521f72d2e664b632",
-"/assets/packages/line_awesome_icons/assets/fonts/icon_font.ttf": "4d42f5f0c62a8f51e876c14575354a6e",
-"/assets/packages/progress_dialog/assets/double_ring_loading_io.gif": "e5b006904226dc824fdb6b8027f7d930",
-"/assets/fonts/MaterialIcons-Regular.ttf": "56d3ffdef7a25659eab6a68a3fbfaf16",
-"/assets/assets/icomi_logo.png": "2c67604a9d4c0bb6a40ffd259fe0701c",
-"/assets/assets/30_zh.png": "79b2fb735a22773868e274a6813df7d8",
-"/assets/assets/defaultvideo1.mp4": "fc58bc23048e90d102eb17b05508ec03",
-"/assets/assets/weather_icons/xiaoxue.png": "7993da6248d070304f89b7983e7be03b",
-"/assets/assets/weather_icons/zhongxue.png": "0248ffdf5346284d60a11da92a002e49",
-"/assets/assets/weather_icons/qing.png": "68310a71626bdcd4f98efab99d09cb2d",
-"/assets/assets/weather_icons/daxue.png": "0636abe4306f0d89a56d56a5fc03b79a",
-"/assets/assets/weather_icons/duoyun.png": "7dc8ed28170fa2346711bbed92e33541",
-"/assets/assets/weather_icons/zhongyu.png": "275bcabb8d667bace21d0a0c2ce73eea",
-"/assets/assets/weather_icons/dayu.png": "1dd1b8e20efdaef9edb8565126bf1ed2",
-"/assets/assets/weather_icons/xiaoyu.png": "de44b70e511ae750a9867b2f3caea91d",
-"/assets/assets/weather_icons/mai.png": "dad47665cec6510b19cefd2d9411a9c3",
-"/assets/assets/weather_icons/yin.png": "7084915229494751836a85aa92b9d29d",
-"/assets/assets/weather_icons/wu.png": "a4b575f9486077899f806a1c45d1444c",
-"/assets/assets/defaultpdf.pdf": "8bd6509aba6eafe623392995b08c7047",
-"/assets/assets/0center.png": "4ba0d35dafcbb0f7ffca9b753a9d299f",
-"/assets/assets/dash_border.png": "79252521e3a4e906a687dea0a3a23a29",
-"/assets/assets/new_meeting_handle.png": "7a06713ff152c762883655d58f9bb3fc",
-"/assets/assets/pointer.jpg": "fd089031b017811948e2d6c8ea7e5588",
-"/assets/assets/30_en.png": "5e370ac332dae4a4963329a581595527",
-"/assets/assets/wendu.png": "8d0a4e1d015cb0cce97637f20a25290f",
-"/assets/assets/quick_en.png": "4d08799a65d86f056948aeda413f1cb3",
-"/assets/assets/60_en.png": "dec0ad02314c76366c1e0e6dd253e74e",
-"/assets/assets/room_booking.png": "1582e5ba827c44c4989411dfdcb43d78",
-"/assets/assets/shidu.png": "0fd8933d3472223b9505c6e6cb43834e",
-"/assets/assets/pm2.5.png": "9dd3582a33bc69fb5ca7c7f49131c67f",
-"/assets/assets/icomi_app_logo.jpg": "dcc54c4e3d53dc7846dbea1accff23d6",
-"/assets/assets/quick_zh.png": "f063dfb687fdf7470041e01d622dad8f",
-"/assets/assets/player_bg.png": "992b815f0263db9f6b5e1d517ab36ee4",
-"/assets/assets/defaultVideo.mp4": "831ff53b1a31bb651f22f0e6d7e8c45f",
-"/assets/assets/defaultaudio.mp3": "45fa5a4d28b3b1a9da9e2834379b119b",
-"/assets/assets/full_book_back.png": "0a9349f89d13e8df7d54f2de5a792a89",
-"/assets/assets/60_zh.png": "eab010c72c12a632b39766bbce1c775e"
+  "assets/AssetManifest.json": "1d9bc40a500f33240f5e171ee94d23a7",
+"assets/assets/images/map_test.jpg": "88e18de36c9892da16c093838cf6ceaa",
+"assets/FontManifest.json": "01700ba55b08a6141f33e168c4a6c22f",
+"assets/fonts/MaterialIcons-Regular.ttf": "56d3ffdef7a25659eab6a68a3fbfaf16",
+"assets/NOTICES": "765588788635c2a6b04a782968e4e238",
+"assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "115e937bb829a890521f72d2e664b632",
+"favicon.png": "5dcef449791fa27946b3d35ad8803796",
+"icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
+"icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
+"index.html": "fad2fafe922eaf686d35f7772c68e117",
+"/": "fad2fafe922eaf686d35f7772c68e117",
+"main.dart.js": "a88e3e10f069a69a52cd5fab1e421f2a",
+"manifest.json": "dc4d0d9da3c1b3f98c8a79ed228a6469"
 };
 
-self.addEventListener('activate', function (event) {
-  event.waitUntil(
-    caches.keys().then(function (cacheName) {
-      return caches.delete(cacheName);
-    }).then(function (_) {
-      return caches.open(CACHE_NAME);
-    }).then(function (cache) {
-      return cache.addAll(Object.keys(RESOURCES));
+// The application shell files that are downloaded before a service worker can
+// start.
+const CORE = [
+  "/",
+"main.dart.js",
+"index.html",
+"assets/NOTICES",
+"assets/AssetManifest.json",
+"assets/FontManifest.json"];
+
+// During install, the TEMP cache is populated with the application shell files.
+self.addEventListener("install", (event) => {
+  return event.waitUntil(
+    caches.open(TEMP).then((cache) => {
+      // Provide a no-cache param to ensure the latest version is downloaded.
+      return cache.addAll(CORE.map((value) => new Request(value, {'cache': 'no-cache'})));
     })
   );
 });
 
-self.addEventListener('fetch', function (event) {
-  event.respondWith(
-    caches.match(event.request)
-      .then(function (response) {
-        if (response) {
-          return response;
+// During activate, the cache is populated with the temp files downloaded in
+// install. If this service worker is upgrading from one with a saved
+// MANIFEST, then use this to retain unchanged resource files.
+self.addEventListener("activate", function(event) {
+  return event.waitUntil(async function() {
+    try {
+      var contentCache = await caches.open(CACHE_NAME);
+      var tempCache = await caches.open(TEMP);
+      var manifestCache = await caches.open(MANIFEST);
+      var manifest = await manifestCache.match('manifest');
+
+      // When there is no prior manifest, clear the entire cache.
+      if (!manifest) {
+        await caches.delete(CACHE_NAME);
+        contentCache = await caches.open(CACHE_NAME);
+        for (var request of await tempCache.keys()) {
+          var response = await tempCache.match(request);
+          await contentCache.put(request, response);
         }
-        return fetch(event.request);
+        await caches.delete(TEMP);
+        // Save the manifest to make future upgrades efficient.
+        await manifestCache.put('manifest', new Response(JSON.stringify(RESOURCES)));
+        return;
+      }
+
+      var oldManifest = await manifest.json();
+      var origin = self.location.origin;
+      for (var request of await contentCache.keys()) {
+        var key = request.url.substring(origin.length + 1);
+        if (key == "") {
+          key = "/";
+        }
+        // If a resource from the old manifest is not in the new cache, or if
+        // the MD5 sum has changed, delete it. Otherwise the resource is left
+        // in the cache and can be reused by the new service worker.
+        if (!RESOURCES[key] || RESOURCES[key] != oldManifest[key]) {
+          await contentCache.delete(request);
+        }
+      }
+      // Populate the cache with the app shell TEMP files, potentially overwriting
+      // cache files preserved above.
+      for (var request of await tempCache.keys()) {
+        var response = await tempCache.match(request);
+        await contentCache.put(request, response);
+      }
+      await caches.delete(TEMP);
+      // Save the manifest to make future upgrades efficient.
+      await manifestCache.put('manifest', new Response(JSON.stringify(RESOURCES)));
+      return;
+    } catch (err) {
+      // On an unhandled exception the state of the cache cannot be guaranteed.
+      console.error('Failed to upgrade service worker: ' + err);
+      await caches.delete(CACHE_NAME);
+      await caches.delete(TEMP);
+      await caches.delete(MANIFEST);
+    }
+  }());
+});
+
+// The fetch handler redirects requests for RESOURCE files to the service
+// worker cache.
+self.addEventListener("fetch", (event) => {
+  var origin = self.location.origin;
+  var key = event.request.url.substring(origin.length + 1);
+  // Redirect URLs to the index.html
+  if (event.request.url == origin || event.request.url.startsWith(origin + '/#')) {
+    key = '/';
+  }
+  // If the URL is not the the RESOURCE list, skip the cache.
+  if (!RESOURCES[key]) {
+    return event.respondWith(fetch(event.request));
+  }
+  event.respondWith(caches.open(CACHE_NAME)
+    .then((cache) =>  {
+      return cache.match(event.request).then((response) => {
+        // Either respond with the cached resource, or perform a fetch and
+        // lazily populate the cache. Ensure the resources are not cached
+        // by the browser for longer than the service worker expects.
+        var modifiedRequest = new Request(event.request, {'cache': 'no-cache'});
+        return response || fetch(modifiedRequest).then((response) => {
+          cache.put(event.request, response.clone());
+          return response;
+        });
       })
+    })
   );
 });
+
+self.addEventListener('message', (event) => {
+  // SkipWaiting can be used to immediately activate a waiting service worker.
+  // This will also require a page refresh triggered by the main worker.
+  if (event.data == 'skipWaiting') {
+    return self.skipWaiting();
+  }
+
+  if (event.message = 'downloadOffline') {
+    downloadOffline();
+  }
+});
+
+// Download offline will check the RESOURCES for all files not in the cache
+// and populate them.
+async function downloadOffline() {
+  var resources = [];
+  var contentCache = await caches.open(CACHE_NAME);
+  var currentContent = {};
+  for (var request of await contentCache.keys()) {
+    var key = request.url.substring(origin.length + 1);
+    if (key == "") {
+      key = "/";
+    }
+    currentContent[key] = true;
+  }
+  for (var resourceKey in Object.keys(RESOURCES)) {
+    if (!currentContent[resourceKey]) {
+      resources.push(resourceKey);
+    }
+  }
+  return contentCache.addAll(resources);
+}
