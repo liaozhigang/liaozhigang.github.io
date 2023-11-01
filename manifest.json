@@ -1,11 +1,11 @@
 {
-    "name": "icomi_map_designer",
-    "short_name": "icomi_map_designer",
+    "name": "Flu Pcb",
+    "short_name": "Flu Pcb",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "A flutter pcb editor",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
